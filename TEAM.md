@@ -12,9 +12,9 @@
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Nguyễn Lê Trọng Mạnh | 2A202603857 | manh025011@gmail.com | Tiberu2611 | Người viết code (Ca 1) → Người kiểm số & QA (Ca 2) |
-|   2 |        |      |       |        | Người kiểm số (Ca 1) → Người viết code (Ca 2) |
-|   3 |        |      |       |        | Người gắn nhãn 1 · Chỉ số, Event & Bảng lỗi |
-|   4 |        |      |       |        | Người gắn nhãn 2 · Giữ hồ sơ Launch v0 & Quản lý nộp bài |
+|   2 | Vũ Văn Chủ | 2A202603873 | vuvanchu3012@gmail.com | chur04 | Người kiểm số (Ca 1) → Người viết code (Ca 2) |
+|   3 | Chu Quang Linh | 2A202603809 | quanglinh1286@gmail.com | ArsNeonci | Người gắn nhãn 1 · Chỉ số, Event & Bảng lỗi |
+|   4 | Vũ Duy Khánh | 2A202603865 | khanhduy1609@gmail.com | khanhduyvu1 | Người gắn nhãn 2 · Giữ hồ sơ Launch v0 & Quản lý nộp bài |
 
 Bốn vai của lab:
 
