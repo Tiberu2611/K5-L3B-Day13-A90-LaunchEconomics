@@ -62,7 +62,17 @@ Số mẫu "đủ 7 ngày" có độ trễ: chỉ số chính và chỉ số m�
 | --- | --- | --- | --- | --- |
 | Số ca làm lại tăng gấp đôi | Chi phí mỗi việc thành công +51,8%, từ 4.472 đ lên 6.787 đ [simulated] (B1, toàn mẫu) | Tỉ lệ làm lại theo tuần > 7% (đợt chạy thử: 48/982 = 4,9% trong phạm vi `noi_dia` + `hang_nang`) | Rà 20 trace làm lại gần nhất trong 3 ngày; chưa về dưới 7% ở tuần kế tiếp thì thu hẹp về `noi_dia` | PM trợ lý hoàn phí |
 | Phải xem lại 100% kéo dài | 11.743 đ = 0,98× của 12.000 đ nếu làm lại 9 phút; 12.415 đ = 1,03× nếu làm lại 15,3 phút như dữ liệu [simulated] (B4, chưa gồm chi phí cố định) | Phút xem lại trung bình > 4,8 phút (mức hoà vốn), hoặc còn xem lại > 50% yêu cầu ở cuối bước rollout 0.25 (đợt chạy thử: 128/982 = 13,0%) | Giảm xem lại theo bậc khi tỉ lệ sửa + bỏ < 15%; chưa đạt thì không sang bước 0.50 | Trưởng nhóm CSKH |
-| Khối lượng thấp hơn kế hoạch | Chi phí cố định từ 1.185 đ lên 2.370 đ mỗi việc khi khối lượng còn một nửa; tổng từ 4.599 đ (0,38×) lên 5.784 đ (0,48×) [simulated] (A4) | Số việc thành công theo tuần < 50% kế hoạch của bước rollout, 2 tuần liên tiếp | Không mở rộng pilot; tính lại chi phí cố định mỗi việc theo khối lượng thật | Giám đốc vận hành |
+| Khối lượng thấp hơn kế hoạch | Chi phí cố định từ 1.185 đ lên 2.370 đ mỗi việc khi khối lượng còn một nửa; tổng từ 4.599 đ (0,38×) lên 5.784 đ (0,48×) [simulated] (A4) | Số việc thành công theo tuần < 50% kế hoạch của bước rollout, 2 tuần liên tiếp | Không mở rộng pilot; xem lại hợp đồng chi phí cố định và tính lại theo khối lượng thật, không kết luận trợ lý đắt khi khối lượng còn nhỏ | Giám đốc vận hành |
+
+Chi phí cố định theo bước rollout, nếu một mình nhóm can thiệp gánh cả 40 triệu đ/tháng (cách tính từ A4: việc/tháng = 33.750 × tỉ lệ; cố định = 40.000.000 ÷ việc/tháng; tổng = cố định + 3.414 đ biến đổi [simulated], giữ như đợt chạy thử; xem lại 100% ở bước 0.10 và 0.25 thì còn cao hơn):
+
+| Bước | Việc thành công mỗi tháng | Cố định mỗi việc | Tổng mỗi việc | So với 12.000 đ |
+| --- | ---: | ---: | ---: | ---: |
+| 0.10 (4 người) | 3.375 | 11.852 đ [simulated] | 15.266 đ [simulated] | 1,27× [simulated] |
+| 0.25 (10 người) | 8.437,5 | 4.741 đ [simulated] | 8.155 đ [simulated] | 0,68× [simulated] |
+| 0.50 (20 người) | 16.875 | 2.370 đ [simulated] | 5.784 đ [simulated] | 0,48× [simulated] |
+
+Vì vậy ngưỡng 8.000 đ của luật dừng 3 chỉ tính chi phí biến đổi (token, tool, xem lại, làm lại). Cộng cả cố định thì bước 0.10 và 0.25 vượt ngưỡng chỉ vì ít việc, dù chi phí biến đổi không đổi [simulated].
 
 Hai con số bất lợi cần nêu khi trình hội đồng: xem lại 100% gần như không tiết kiệm (0,98×–1,03×) [simulated], và phút xem lại, làm lại đều là số giả lập, cần thay bằng số đo thật trong pilot. Các ngưỡng 7%, 50%, 15% là đề xuất của nhóm, không phải số tính từ dữ liệu.
 
