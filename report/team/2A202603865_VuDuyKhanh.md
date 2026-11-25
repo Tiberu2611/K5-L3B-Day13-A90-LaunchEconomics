@@ -9,33 +9,49 @@
 
 ## 2. Phần việc phụ trách
 
-- `report/team/ho_so_launch_v0.md`: điền cuốn chiếu sau mỗi checkpoint CP1–CP5, chốt đề xuất cuối.
-- CP3: gắn nhãn độc lập 20 ca lỗi (bộ nhãn người 2 trong `report/team/bang_loi.md`), sau đó cùng Người gắn nhãn 1 so nhãn.
-- Duyệt chéo Gate 2a: trình bày hồ sơ nhóm A90, ghi `report/team/phieu_cham.md` khi nhóm chấm nhóm n + 1.
-- Tổng hợp `TEAM.md`, `report/team/group_report.md`; rà checklist `SUBMISSION.md`, nhắc cả nhóm nộp link LMS.
+- `report/team/ho_so_launch_v0.md`: giữ và cập nhật cuốn chiếu hồ sơ một trang (7 mục) từ CP1 đến CP5, chốt đề xuất cuối và các điều kiện ràng buộc cho hội đồng Gate 2a.
+- CP3 (`report/team/bang_loi.md`): gắn nhãn độc lập 20 ca lỗi theo 5 loại của Google PAIR (cột `Nhãn người 2`, 8 phút không trao đổi), sau đó đối chiếu với Thành viên 3 để tính tỉ lệ đồng thuận và viết quy tắc phân biệt.
+- Duyệt chéo Gate 2a (`report/team/phieu_cham.md`): đại diện trình bày hồ sơ nhóm A90, đồng thời ghi phiếu chấm khi nhóm A90 làm hội đồng chấm nhóm n + 1.
+- Tổng hợp `TEAM.md` và `report/team/group_report.md`; chạy kiểm tra `src/lab13.py` trên máy thứ hai; rà checklist `SUBMISSION.md` và nhắc cả 4 thành viên nộp link repo lên LMS trước 23h59 GMT+7.
 
 ## 3. Đóng góp cụ thể
 
-- Điền đủ 7 mục hồ sơ launch v0 với con số chính, trạng thái, người phụ trách là một vai trò; đề xuất **Go có điều kiện** cho phạm vi noi_dia + hang_nang, kèm 4 điều kiện có vai trò phụ trách và ngày kiểm tra.
-- Nêu rõ các con số bất lợi trong đề xuất: power 0,64 nếu tác động thật 5 điểm; xem lại 100% còn 11.743 đ = 0,98× (simulated); 92,5% chi phí là phút nhân viên simulated.
-- Gắn nhãn 20 ca lỗi (bộ nhãn người 2): đang chờ thực hiện độc lập cùng Thành viên 3 trong `report/team/bang_loi.md`.
-- Ghi phiếu chấm nhóm n + 1: đã chuẩn bị sẵn 3 câu hỏi dự phòng trong `report/team/phieu_cham.md`, chờ chấm trực tiếp tại buổi duyệt chéo Gate 2a.
-- Viết `report/team/group_report.md` (còn chờ số đồng thuận CP3 và điểm duyệt chéo) và mục Thành viên 4 trong `TEAM.md`.
+- **Hồ sơ launch v0 (`report/team/ho_so_launch_v0.md`):**
+  - Hoàn thiện đủ 7 mục với con số chính, trạng thái (`Xong, có bằng chứng` / `Giả lập` / `Chưa`) và người phụ trách là một vai trò cụ thể (không ghi "cả đội").
+  - Chốt đề xuất **Go có điều kiện** cho phạm vi `noi_dia` + `hang_nang` (982/1.200 yêu cầu; 0,22× và 0,69×), loại bỏ `quoc_te` (1,88×; chạy lại lần 3 chỉ đạt 2,2% ok) và `doi_tac` (0,85×).
+  - Nêu thẳng các con số bất lợi: `power = 0,64` nếu tác động thật chỉ 5 điểm; xem lại 100% đẩy chi phí lên 11.743 đ = 0,98× (hoặc 12.415 đ = 1,03× nếu làm lại 15,3 phút) [simulated]; 92,5% tổng chi phí đến từ phút nhân viên [simulated].
+  - Kèm 4 điều kiện nghiệm thu có vai trò phụ trách và mốc thời gian khớp với `report/team/pilot_plan.yaml` (kiểm tra trước ngày bắt đầu 2026-11-30, rà soát sau bước 0.10 ngày 2026-12-07, xác nhận đủ 299 yêu cầu/nhân viên trước bước 0.50 ngày 2026-12-13, ngày quyết định 2027-01-04).
+- **Báo cáo nhóm (`report/team/group_report.md`) & `TEAM.md`:**
+  - Soạn hoàn chỉnh `group_report.md` (8 mục, tóm tắt phương pháp, kết quả A–E, khó khăn kỹ thuật khi cài đặt trên máy thứ hai, hạn chế và hướng cải thiện).
+  - Cập nhật thông tin đóng góp, bằng chứng của Thành viên 4 trong `TEAM.md` và chuẩn bị khung tổng hợp cho cả nhóm.
+- **Phiếu chấm hội đồng (`report/team/phieu_cham.md`):**
+  - Thiết lập sẵn thông tin nhóm chấm (A90 · L3B) và soạn 3 câu hỏi phản biện dự phòng bám sát số liệu đối chiếu (chi phí xem lại 100%, ngưỡng 20 cụm và power 0,64, tỉ lệ mở lại 4,25% với luật dừng tuần đầu).
+- **Kiểm chứng trên máy thứ hai:**
+  - Tự thiết lập môi trường `src/.venv`, cài đặt `src/requirements.txt` và chạy lại `python lab13.py` để xác nhận toàn bộ kết quả khớp trên máy khác.
+- **Phần đang chờ phối hợp / phiên 17:00:**
+  - Gắn nhãn độc lập 20 ca lỗi (cột `Nhãn người 2` trong `bang_loi.md`) cùng Thành viên 3; sau đó cập nhật tỉ lệ đồng thuận vào `ho_so_launch_v0.md` và `group_report.md`.
+  - Điền kết quả chấm chéo thực tế vào `phieu_cham.md` và `group_report.md` trong phiên bảo vệ tại lớp.
 
 ## 4. Bằng chứng
 
-- Commit: `5f9e938` (hồ sơ launch v0, group report, phiếu chấm, báo cáo cá nhân), `17b79fc` (khớp ngày điều kiện với `pilot_plan.yaml`).
-- File: `report/team/ho_so_launch_v0.md`, `report/team/phieu_cham.md`, `report/team/group_report.md`, `TEAM.md`.
-- Con số trong hồ sơ đối chiếu với output `python3 lab13.py` (chạy trên máy thứ hai): 4.472 đ/việc thành công [simulated], 82,83% / 27,12% / 4,25%, D1 1.251 · 859 · DE 6,96.
+| Việc | Bằng chứng |
+| --- | --- |
+| Hồ sơ launch v0, phiếu chấm, báo cáo nhóm | Commit `5f9e938` |
+| Đồng bộ mốc ngày điều kiện với `pilot_plan.yaml` | Commit `17b79fc` |
+| Chạy kiểm chứng trên máy thứ hai | `cd src && .venv/bin/python lab13.py` in `Ba phép thử đáp án biết trước: ĐẠT` (1,20 · 1,25 · 1,25) |
+| Đối chiếu số liệu hồ sơ với output `lab13.py` | CPS 4.472 đ (16,3× hoá đơn; 92,5% giờ nhân viên) [simulated]; B4 11.743 đ = 0,98× / 12.415 đ = 1,03× [simulated]; D1 1.251 · 859 · DE 6,96 · power 0,64; E1 82,83% / 27,12% / 4,25% / 3,97% |
+| Hồ sơ và báo cáo đã nộp | `report/team/ho_so_launch_v0.md`, `report/team/phieu_cham.md`, `report/team/group_report.md`, `TEAM.md` |
 
 ## 5. Công cụ AI đã dùng
 
-- Claude Code: đọc đề, chạy `src/lab13.py`, soạn khung `ho_so_launch_v0.md` và `group_report.md` từ output của script.
-- Tự kiểm tra: mọi số trong hồ sơ được so lại với output `lab13.py` và bảng số đối chiếu trong `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md` (lệch ≤ 2%); rà lại để hồ sơ không dùng từ cấm theo quy tắc 5 của `README.md`.
-- Không dùng AI để gắn nhãn 20 ca lỗi hay để chấm điểm nhóm khác.
+- **Công cụ:** Claude Code (soạn khung ban đầu cho `ho_so_launch_v0.md`, `group_report.md`, `phieu_cham.md` từ output của `src/lab13.py`) và Antigravity / Gemini (rà soát toàn bộ project, đối chiếu phần việc còn thiếu của Thành viên 4 và hoàn thiện lại báo cáo cá nhân này).
+- **Tự kiểm tra kết quả:**
+  - Chạy trực tiếp `src/lab13.py` trong `src/.venv`, đối chiếu từng con số trong `ho_so_launch_v0.md` và `group_report.md` với output của script và bảng đáp án trong `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md` (sai lệch ≤ 2%).
+  - Rà soát bằng `grep` để đảm bảo toàn bộ số tính từ `_simulated` đều có nhãn `simulated`, không có từ bị cấm theo quy tắc 5 của `README.md`, và các mốc ngày khớp hoàn toàn với `pilot_plan.yaml`.
+  - **Không** dùng AI để gắn nhãn 20 ca lỗi hay chấm điểm nhóm khác (tuân thủ `RULES.md`).
 
 ## 6. Tự đánh giá
 
-- **Phần làm tốt:** Hoàn thành sớm bộ hồ sơ `ho_so_launch_v0.md` đủ 7 mục, gắn đúng nhãn `simulated`, nêu thẳng các con số bất lợi (`power 0,64`, xem lại 100% tốn `0,98×–1,03×`) và chạy kiểm chứng `src/lab13.py` trên máy thứ hai.
-- **Phần còn thiếu:** Chưa hoàn tất gắn nhãn độc lập 20 ca lỗi (chờ phối hợp với Thành viên 3) và phần điền điểm duyệt chéo trong `phieu_cham.md` / `group_report.md` tại lớp.
-- **Điều rút ra:** Hồ sơ duyệt Gate 2a chỉ có giá trị khi con số nhất quán giữa các file (`pilot_plan.yaml` và `ho_so_launch_v0.md`) và không che giấu các chỉ số rủi ro.
+- **Phần làm tốt:** Chủ động dựng và cập nhật cuốn chiếu `ho_so_launch_v0.md` đủ 7 mục rõ ràng, trung thực với dữ liệu (nêu thẳng các con số bất lợi như `power 0,64` và ngưỡng hoà vốn xem lại `≤ 5,12 phút/ca`), đồng thời đối khớp chặt chẽ mốc thời gian với kế hoạch pilot và kiểm chứng chạy code trên máy thứ hai.
+- **Phần còn thiếu / cần cải thiện:** Cần hoàn tất ngay phần gắn nhãn độc lập 20 ca lỗi cùng Thành viên 3 để chuyển trạng thái Mục 5 trong `ho_so_launch_v0.md` từ `Chưa` sang `Xong, có bằng chứng`, và cập nhật kết quả duyệt chéo sau phiên 17:00.
+- **Điều học được:** Một hồ sơ duyệt Gate 2a thuyết phục không phải là hồ sơ chọn phương án lạc quan nhất, mà là hồ sơ tách rõ dữ liệu đo thật với dữ liệu giả lập (`simulated`), chỉ ra được giới hạn cỡ mẫu khi chia cụm, và gắn mỗi rủi ro kinh tế với một điều kiện dừng có người chịu trách nhiệm cụ thể.
