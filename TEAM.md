@@ -92,7 +92,7 @@ Sao chép mục dưới đây cho từng thành viên.
 - A2: (245.585,132 + 84.000 + 1.780.000 + 2.264.000) / 978 = 4.471,968 đ → **4.472 đ [simulated]**; bảng đối chiếu chi tiết ở cuối `report/team/bang_chi_phi.md`.
 - B3: **6.901.220 đ [simulated]** khi giới hạn 2 lần là nhỏ nhất cho cả hệ thống; B4 làm tròn **11.743 đ / 12.415 đ [simulated]**.
 - D1: **1.251; DE 2,48; 3.103; 42 người/nhóm; trần 1.000/300; m tối thiểu 299**, DE 6,96; E1: **994/1.200, 48/177, 51/1.200**, an toàn trong phạm vi **39/982**.
-- YAML được kiểm bằng `yaml.safe_load`, không còn dấu hỏi, đủ 4 luật dừng theo mẫu; chưa tạo commit/push cho phần việc này.
+- YAML được kiểm bằng `yaml.safe_load`, không còn dấu hỏi, đủ 4 luật dừng theo mẫu; đã push lên `main` ở commit `781d314`.
 
 ## Thành viên 3 — Người gắn nhãn 1 · Chỉ số, Event & Bảng lỗi
 
@@ -120,12 +120,12 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Đóng góp cụ thể
 
-- Điền đủ 7 mục `report/team/ho_so_launch_v0.md` (con số chính, trạng thái, vai trò phụ trách) và đề xuất **Go có điều kiện** cho noi_dia + hang_nang, nêu cả số bất lợi (power 0,64; xem lại 100% = 0,98× simulated).
-- Gắn nhãn độc lập 20 ca lỗi (cột "Nhãn người 2" trong `report/team/bang_loi.md`).
-- Ghi `report/team/phieu_cham.md` khi nhóm A90 làm hội đồng; viết `report/team/group_report.md`.
+- Điền đủ 7 mục `report/team/ho_so_launch_v0.md` (con số chính, trạng thái, vai trò phụ trách), đề xuất **Go có điều kiện** cho `noi_dia` + `hang_nang`, nêu cả số bất lợi (`power 0,64`; xem lại 100% = `0,98×–1,03×` [simulated]) và khớp ngày điều kiện với `pilot_plan.yaml`.
+- Viết khung `report/team/group_report.md` và chuẩn bị sẵn 3 câu hỏi dự phòng trong `report/team/phieu_cham.md`.
 - Chạy `python3 lab13.py` trên máy thứ hai (tạo `.venv`, cài `requirements.txt`): ba phép thử ĐẠT.
+- Chưa thực hiện (đang chờ tại lớp): gắn nhãn độc lập 20 ca lỗi cùng Thành viên 3 vào `report/team/bang_loi.md` và chấm chéo nhóm n + 1 vào `report/team/phieu_cham.md`.
 
 ### Bằng chứng
 
-- File: `report/team/ho_so_launch_v0.md`, `report/team/phieu_cham.md`, `report/team/group_report.md`, `report/team/2A202603865_VuDuyKhanh.md`.
-- Commit: ... (điền hash sau khi push)
+- File đã hoàn thành: `report/team/ho_so_launch_v0.md`, `report/team/2A202603865_VuDuyKhanh.md`; file đã dựng khung chờ duyệt chéo: `report/team/phieu_cham.md`, `report/team/group_report.md`.
+- Commit: `5f9e938` (hồ sơ launch v0, group report, phiếu chấm, báo cáo cá nhân), `17b79fc` (khớp ngày điều kiện với `pilot_plan.yaml`).
