@@ -108,8 +108,12 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Đóng góp cụ thể
 
--
+- Điền đủ 7 mục `report/team/ho_so_launch_v0.md` (con số chính, trạng thái, vai trò phụ trách) và đề xuất **Go có điều kiện** cho noi_dia + hang_nang, nêu cả số bất lợi (power 0,64; xem lại 100% = 0,98× simulated).
+- Gắn nhãn độc lập 20 ca lỗi (cột "Nhãn người 2" trong `report/team/bang_loi.md`).
+- Ghi `report/team/phieu_cham.md` khi nhóm A90 làm hội đồng; viết `report/team/group_report.md`.
+- Chạy `python3 lab13.py` trên máy thứ hai (tạo `.venv`, cài `requirements.txt`): ba phép thử ĐẠT.
 
 ### Bằng chứng
 
--
+- File: `report/team/ho_so_launch_v0.md`, `report/team/phieu_cham.md`, `report/team/group_report.md`, `report/team/2A202603865_VuDuyKhanh.md`.
+- Commit: ... (điền hash sau khi push)

@@ -2,8 +2,8 @@
 
 Nhóm số n chấm nhóm số n + 1; nhóm cuối chấm nhóm 1. Chấm theo bằng chứng trong hồ sơ, không theo cách trình bày: một đề xuất No-go có lý do bằng số được điểm cao hơn một đề xuất Go bỏ qua con số bất lợi.
 
-- Nhóm chấm (hội đồng): ...
-- Nhóm được chấm: ...
+- Nhóm chấm (hội đồng): A90 · L3B (người ghi phiếu: Người gắn nhãn 2 kiêm giữ hồ sơ)
+- Nhóm được chấm: ... (nhóm n + 1 theo danh sách lớp)
 
 | Tiêu chí | 0 điểm | 5 điểm | 10 điểm | Điểm | Lý do (có số) |
 | --- | --- | --- | --- | ---: | --- |
@@ -19,3 +19,11 @@ Nhóm số n chấm nhóm số n + 1; nhóm cuối chấm nhóm 1. Chấm theo b
 **Một câu hỏi cho đội trình:** ...
 
 **Câu trả lời của đội trình (ghi lại tại buổi):** ...
+
+---
+
+Câu hỏi dự phòng khi đọc hồ sơ nhóm được chấm (chọn một câu cho mục "Một câu hỏi cho đội trình"):
+
+- Chi phí mỗi việc thành công là bao nhiêu nếu tuần đầu phải xem lại 100%? (đối chiếu của nhóm A90: 11.743 đ = 0,98×, simulated)
+- Cách chia của nhóm có ít nhất 20 cụm mỗi nhóm không? Nếu chấp nhận mde 6 điểm thì power ở mức 5 điểm là bao nhiêu? (A90: 0,64)
+- Với tỉ lệ mở lại 4,25% hiện tại, ngưỡng an toàn của nhóm có làm pilot dừng ngay tuần đầu không?
