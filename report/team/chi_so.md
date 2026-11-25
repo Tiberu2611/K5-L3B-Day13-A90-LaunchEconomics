@@ -4,13 +4,17 @@
 
 | Loại | Chỉ số | Công thức | Tính thử trên 1.200 yêu cầu |
 | --- | --- | --- | --- |
-| Chính (kết quả) | % yêu cầu đóng trong 24 giờ và không mở lại trong 7 ngày | `dong_trong_24h` bằng 1 và `mo_lai_trong_7_ngay` bằng 0, chia tổng số yêu cầu | ... |
-| Dùng | Tỉ lệ bỏ qua gợi ý | `quyet_dinh_xem_lai` là `sua` hoặc `bo`, chia số yêu cầu được xem lại | ... |
-| An toàn | Tỉ lệ lỗi lọt đến khách | `mo_lai_trong_7_ngay` bằng 1, chia tổng số yêu cầu | ... |
+| Chính (kết quả) | % yêu cầu đóng trong 24 giờ và không mở lại trong 7 ngày | `dong_trong_24h` bằng 1 và `mo_lai_trong_7_ngay` bằng 0, chia tổng số yêu cầu | **82,83% = 994/1.200** |
+| Dùng | Tỉ lệ bỏ qua gợi ý | Trong các yêu cầu `duoc_xem_lai == 1`, đếm `quyet_dinh_xem_lai` là `sua` hoặc `bo`, chia số yêu cầu được xem lại | **27,12% = 48/177** |
+| An toàn | Tỉ lệ lỗi lọt đến khách | `mo_lai_trong_7_ngay` bằng 1, chia tổng số yêu cầu | **4,25% = 51/1.200** |
 | Dùng | Nhóm tự đề xuất: ... | ... | Không cần tính |
 | An toàn | Nhóm tự đề xuất: ... | ... | Không cần tính |
 
 Viết "chỉ số trong đợt chạy thử là …", không viết "trợ lý đã nâng chỉ số": đợt chạy thử không có nhóm đối chứng.
+
+**Bàn giao số E1 — Thành viên 2, Vũ Văn Chủ:** `tinh_chi_so()` / `in_chi_so()` trong `src/lab13.py` tính ba dòng trên; trong phạm vi `noi_dia` + `hang_nang`, mở lại là **39/982 = 3,97%** (D3). Toàn bộ là dữ liệu giả lập của lab. Chỉ số chính 994 ca khác 978 ca `ket_qua == 'thanh_cong'` của mô hình chi phí vì định nghĩa thành công chi phí còn xét sai tiền; không thay hai mẫu số/tử số cho nhau.
+
+Trong pilot, chỉ tính chỉ số chính và mở lại trên cohort được theo dõi đủ 7 ngày. Baseline 70% là giả định thiết kế, chưa thể dùng 82,83% của mẫu chạy thử để kết luận có tác động. Hai chỉ số tự đề xuất, event và kiểm tra chéo bên dưới do Thành viên 3 tiếp tục hoàn thiện theo phân công.
 
 ## Danh sách event
 
