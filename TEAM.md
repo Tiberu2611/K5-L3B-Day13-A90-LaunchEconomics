@@ -11,7 +11,7 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        | Người viết code (Ca 1) → Người kiểm số & QA (Ca 2) |
+|   1 | Nguyễn Lê Trọng Mạnh | 2A202603857 | manh025011@gmail.com | Tiberu2611 | Người viết code (Ca 1) → Người kiểm số & QA (Ca 2) |
 |   2 |        |      |       |        | Người kiểm số (Ca 1) → Người viết code (Ca 2) |
 |   3 |        |      |       |        | Người gắn nhãn 1 · Chỉ số, Event & Bảng lỗi |
 |   4 |        |      |       |        | Người gắn nhãn 2 · Giữ hồ sơ Launch v0 & Quản lý nộp bài |
