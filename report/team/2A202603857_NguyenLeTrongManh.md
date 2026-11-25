@@ -19,7 +19,8 @@
 - **B:** chín kịch bản độ nhạy. Ba yếu tố nhạy nhất: số ca làm lại (+51,8%), tỉ lệ xem lại (+40,7%), lương nhân viên (+23,1%) [simulated].
 - **E2:** ba dòng rủi ro kinh tế trong `chi_so.md`, số lấy từ A4, B1, B4.
 - File cũng in sẵn D1 và E1 để Thành viên 2 kiểm tra và tiếp nhận.
-- Chưa làm tại thời điểm viết: tính tay D1, kiểm tra cuối trên máy thứ hai.
+- **D1 (tính tay kiểm chứng):** hoàn thành tính tay 5 câu cỡ mẫu a–e khớp với `src/lab13.py` (1.251/nhóm; 3.103/nhóm → 84 người > 40; trần 1.000; trần 300; m ≥ 299 với DE = 6,96 cho mức chênh 6 điểm).
+- Chưa làm tại thời điểm viết: kiểm tra cuối toàn repo (chờ `bang_loi.md` và phần event của `chi_so.md`).
 
 ## 4. Bằng chứng
 
@@ -32,14 +33,19 @@
 | B3 | Giới hạn 2 lần rẻ nhất cả hệ thống: 6.901.220 đ [simulated] |
 | B4 | 11.743 đ (làm lại 9 phút), 12.415 đ (làm lại 15,3 phút) [simulated] |
 | E2 | `report/team/chi_so.md`, mục E2 |
+| Tính tay A1, D1 | Mục 5 của báo cáo này |
 
 ## 5. Công cụ AI đã dùng
 
 - **Công cụ:** Claude Code (Anthropic).
 - **Dùng vào việc:** tóm tắt đề, xử lý lỗi môi trường Python, viết `src/lab13.py`, thao tác Git, soạn mục E2, phần đóng góp trong `TEAM.md` và bản nháp báo cáo này. A1, `mo_hinh` và `co_mau` bám sát code mẫu trong `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md`.
 - **Kiểm tra tự động:** ba phép thử A1; assert "giảm một nửa" bằng nửa mức tăng "gấp đôi"; assert tác động của cặp B2 bằng tổng hai tác động riêng; Claude đối chiếu kết quả in ra với số trong hướng dẫn.
-- **Tôi tự kiểm tra:** [Mạnh điền: đã tính tay con số nào, kết quả bao nhiêu]
+- **Tôi tự kiểm tra:**
+  - Tự tính tay lại 3 phép thử A1 (`p = 0,8`): `k=2` ra `1,20`; `k=∞` ra `1,25`; `k=3` ra `1,24 / 0,992 = 1,25`.
+  - Tự tính tay toàn bộ 5 câu D1: câu (a) `1.250` yêu cầu/nhóm với z làm tròn, code ra `1.251` (lệch dưới 0,1%); câu (b) `DE = 1 + 74 × 0,02 = 2,48` → `3.103` yêu cầu/nhóm (`84 > 40` người); câu (c) trần `20 / 0,02 = 1.000`; câu (d) trần `6 / 0,02 = 300`; câu (e) giải `20m / (0,98 + 0,02m) ≥ 859` → `2,82m ≥ 841,82` → `m ≥ 299` yêu cầu/người (`DE = 6,96`), khớp trong sai số làm tròn với hàm `in_d1()` trong `src/lab13.py`.
 
 ## 6. Tự đánh giá
 
-[Mạnh điền: phần làm tốt, phần còn yếu, điều học được]
+- **Phần làm tốt:** Hoàn thành sớm và đầy đủ phần code mô hình chi phí (`src/lab13.py`), với hỗ trợ của Claude Code, cho cả A, B, D1, E1 và phần rủi ro kinh tế E2 đúng chuẩn quy tắc (đủ nhãn `simulated`, không dùng từ bị cấm theo quy tắc 5), giúp nhóm có số liệu chuẩn để triển khai các bước sau.
+- **Phần còn yếu:** Ban đầu chưa nắm sâu ý nghĩa thống kê của các công thức (như cỡ mẫu hiệu dụng khi chia cụm, nghịch lý tối ưu cục bộ ở B3) nên cần kiểm tra và tính tay lại để hiểu bản chất phục vụ bảo vệ trước hội đồng.
+- **Điều học được:** Chi phí thật của AI agent nằm phần lớn ở thời gian con người xem lại và làm lại (chiếm 92,5% tổng chi phí [simulated]), không phải tiền token; khi thiết kế pilot theo cụm (nhân viên/depot), số cụm quyết định trần cỡ mẫu hiệu dụng chứ không phải tổng số yêu cầu.
