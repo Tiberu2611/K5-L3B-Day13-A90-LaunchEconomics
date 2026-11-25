@@ -8,6 +8,8 @@ import sys
 from statistics import NormalDist
 
 import pandas as pd
+from statsmodels.stats.power import NormalIndPower
+from statsmodels.stats.proportion import proportion_effectsize
 
 # Bảng giá GIẢ ĐỊNH của lab (không phải giá thật của nhà cung cấp nào)
 GIA_VAO = 26        # đồng cho 1.000 token đầu vào
@@ -24,7 +26,7 @@ PHAM_VI = ['noi_dia', 'hang_nang']   # phạm vi pilot
 def so_lan_chay_ky_vong(p, k=None):
     """Số lần chạy trung bình cho 1 yêu cầu khi mỗi lần đúng với xác suất p.
     k = số lần chạy tối đa; k=None nghĩa là chạy lại đến khi đúng."""
-    return 1 / p if k is None else (1 - (1 - p) ** k) / p
+    return 1/p if k is None else (1-(1-p)**k)/p
 
 
 def ti_le_thanh_cong(p, k=None):
@@ -34,7 +36,7 @@ def ti_le_thanh_cong(p, k=None):
 
 def he_so_chi_phi_moi_viec_thanh_cong(p, k=None):
     """Chi phí mỗi việc thành công, tính bằng bội số của giá một lần chạy."""
-    return so_lan_chay_ky_vong(p, k) / ti_le_thanh_cong(p, k)
+    return so_lan_chay_ky_vong(p, k)/ti_le_thanh_cong(p, k)
 
 
 def kiem_tra_dap_an_biet_truoc():
@@ -209,45 +211,68 @@ def he_so_thiet_ke(m, icc=0.02):
     return 1 + (m - 1) * icc
 
 
-def in_d1(p0=0.70, icc=0.02, m=75, nhan_vien=40):
-    print('\n=== D1 · Cỡ mẫu ===')
+def tinh_d1(p0=0.70, icc=0.02, m=75, nhan_vien=40):
+    """Ca 2: tiếp nhận D1, trả số để đối chiếu YAML; n là mẫu hiệu dụng mỗi nhóm."""
     n5, n6 = co_mau(p0, p0 + 0.05), co_mau(p0, p0 + 0.06)
     de = he_so_thiet_ke(m, icc)
     n_cum = math.ceil(n5 * de)
     nguoi = math.ceil(n_cum / m)
-    print(f'a · Theo yêu cầu, chênh 5 điểm: {n5:,} mỗi nhóm')
-    print(f'b · Theo nhân viên, m = {m}: DE = {de:.2f} → {n_cum:,} mỗi nhóm → {nguoi} người mỗi nhóm, '
-          f'tổng {2 * nguoi} > {nhan_vien}: không đủ người')
-    print(f'c · 20 nhân viên mỗi nhóm: hiệu dụng tối đa {20 / icc:,.0f} < {n5:,}: không đạt')
-    print(f'd · 6 depot mỗi nhóm: hiệu dụng tối đa {6 / icc:,.0f} < {n5:,}: không đạt')
+    cum = nhan_vien // 2
+    if cum <= n6 * icc:
+        raise ValueError('Số cụm không đủ cho mức chênh 6 điểm, dù tăng số yêu cầu mỗi cụm.')
     # 20m / (1 + (m − 1)·icc) ≥ n6  ⇔  m ≥ n6·(1 − icc) / (20 − n6·icc)
-    m6 = math.ceil(n6 * (1 - icc) / (20 - n6 * icc))
-    print(f'e · Chênh 6 điểm ({n6}/nhóm), 20 người mỗi nhóm: m ≥ {m6} yêu cầu mỗi người '
-          f'(DE {he_so_thiet_ke(m6, icc):.2f})')
-    try:
-        from statsmodels.stats.power import NormalIndPower
-        from statsmodels.stats.proportion import proportion_effectsize
-    except ImportError:
-        print('(chưa cài statsmodels: bỏ qua phần tính power)')
-        return
+    m6 = math.ceil(n6 * (1 - icc) / (cum - n6 * icc))
+    de6 = he_so_thiet_ke(m6, icc)
     pw = NormalIndPower().power(proportion_effectsize(p0 + 0.05, p0), n6, 0.05)
-    print(f'Nếu tác động thật chỉ 5 điểm với n = {n6}: power = {pw:.2f}')
+    return dict(n5=n5, n6=n6, de75=de, n_cum=n_cum, nguoi=nguoi,
+                gioi_han_staff=cum / icc, gioi_han_depot=6 / icc,
+                clusters_per_arm=cum, m6=m6, de6=de6, raw_per_arm=cum * m6,
+                effective_per_arm=cum * m6 / de6, power_at_5=float(pw))
+
+
+def in_d1():
+    print('\n=== D1 · Cỡ mẫu (xấp xỉ theo công thức của lab) ===')
+    d = tinh_d1()
+    print(f"a · Theo yêu cầu, chênh 5 điểm: {d['n5']:,} mỗi nhóm")
+    print(f"b · Theo nhân viên, m = 75: DE = {d['de75']:.2f} → {d['n_cum']:,} mỗi nhóm → "
+          f"{d['nguoi']} người mỗi nhóm, tổng {2 * d['nguoi']} > 40: không đủ người")
+    print(f"c · 20 nhân viên mỗi nhóm: hiệu dụng luôn < {d['gioi_han_staff']:,.0f} < {d['n5']:,}: không đạt")
+    print(f"d · 6 depot mỗi nhóm: hiệu dụng luôn < {d['gioi_han_depot']:,.0f} < {d['n5']:,}: không đạt")
+    print(f"e · Chênh 6 điểm ({d['n6']}/nhóm), 20 người mỗi nhóm: m ≥ {d['m6']} yêu cầu mỗi người "
+          f"(DE {d['de6']:.2f})")
+    print(f"Mẫu thô {d['raw_per_arm']:,}/nhóm → hiệu dụng {d['effective_per_arm']:.2f}/nhóm; "
+          'chỉ tính ở bước 0.50, mọi yêu cầu được theo dõi đủ 7 ngày')
+    print(f"Nếu tác động thật chỉ 5 điểm với n = {d['n6']}: power = {d['power_at_5']:.2f}")
 
 
 # ---------- Nhiệm vụ D3, E1 · Chỉ số ----------
-def in_chi_so(reqs):
-    print('\n=== D3 + E1 · Chỉ số trong đợt chạy thử (không có nhóm đối chứng) ===')
+def tinh_chi_so(reqs):
+    """Ca 2: đếm cả tử số/mẫu số E1 và D3, không dùng ket_qua thay chỉ số chính."""
     dat = (reqs['dong_trong_24h'] == 1) & (reqs['mo_lai_trong_7_ngay'] == 0)
     xem = reqs[reqs['duoc_xem_lai'] == 1]
     bo_qua = xem['quyet_dinh_xem_lai'].isin(['sua', 'bo'])
     mo_lai = reqs['mo_lai_trong_7_ngay'] == 1
-    for ten, cot in [
-        ('Chính: đóng trong 24h, không mở lại 7 ngày', dat),
-        ('Dùng: bỏ qua gợi ý (sua + bo) / được xem lại', bo_qua),
-        ('An toàn: mở lại trong 7 ngày', mo_lai),
-        ('An toàn, phạm vi noi_dia + hang_nang', mo_lai[reqs['loai'].isin(PHAM_VI)]),
+    return {
+        'chinh': (int(dat.sum()), len(dat)),
+        'bo_qua': (int(bo_qua.sum()), len(bo_qua)),
+        'an_toan': (int(mo_lai.sum()), len(mo_lai)),
+        'an_toan_pham_vi': (int(mo_lai[reqs['loai'].isin(PHAM_VI)].sum()),
+                           int(reqs['loai'].isin(PHAM_VI).sum())),
+    }
+
+
+def in_chi_so(reqs):
+    print('\n=== D3 + E1 · Chỉ số trong đợt chạy thử (không có nhóm đối chứng) ===')
+    chi_so = tinh_chi_so(reqs)
+    for ten, key in [
+        ('Chính: đóng trong 24h, không mở lại 7 ngày', 'chinh'),
+        ('Dùng: bỏ qua gợi ý (sua + bo) / được xem lại', 'bo_qua'),
+        ('An toàn: mở lại trong 7 ngày', 'an_toan'),
+        ('An toàn, phạm vi noi_dia + hang_nang', 'an_toan_pham_vi'),
     ]:
-        print(f'{ten:46s} {cot.mean():.2%} ({cot.sum()}/{len(cot)})')
+        tu, mau = chi_so[key]
+        ti_le = f'{tu / mau:.2%}' if mau else 'chưa có mẫu'
+        print(f'{ten:46s} {ti_le} ({tu}/{mau})')
 
 
 if __name__ == '__main__':

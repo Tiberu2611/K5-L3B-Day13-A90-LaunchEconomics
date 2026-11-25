@@ -61,11 +61,14 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Đóng góp cụ thể
 
--
+- Phụ trách `src/lab13.py` cho A1–A4 và B1–B4, viết với trợ lý AI (Claude Code); file cũng in sẵn D1 và ba chỉ số E1 để Thành viên 2 kiểm tra và tiếp nhận.
+- Phụ trách mục E2 (ba dòng rủi ro kinh tế) trong `report/team/chi_so.md`, soạn với trợ lý AI.
 
 ### Bằng chứng
 
--
+- Commit `5e09dc7` (nhánh `manh`), gộp vào `main` qua PR #1 (`548aa34`).
+- `python lab13.py` in `Ba phép thử đáp án biết trước: ĐẠT`; A2 = 4.472 đ [simulated], A4 = 4.599 đ [simulated], B3 giới hạn 2 lần = 6.901.220 đ [simulated].
+- Báo cáo cá nhân: `report/team/2A202603857_NguyenLeTrongManh.md`.
 
 ## Thành viên 2 — Người kiểm số (Ca 1) → Người viết code (Ca 2)
 
@@ -76,11 +79,19 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Đóng góp cụ thể
 
--
+- Hoàn thiện `report/team/bang_chi_phi.md`: A1–A4, đủ 9 kịch bản B1, B2, B3, B4; bổ sung bảng phép tính đối chiếu từ CSV và nhãn `simulated`.
+- Tiếp nhận D1/E1 Mạnh đã viết sẵn trong `src/lab13.py`; bổ sung `tinh_d1()` / `tinh_chi_so()` trả kết quả có thể kiểm tra, phân biệt 5.980 yêu cầu thô và 859,20 mẫu hiệu dụng mỗi nhóm, không bỏ qua `NormalIndPower` khi thiếu thư viện.
+- Hoàn thiện `report/team/pilot_plan.yaml`: đủ D1/D2, chia 20–20 theo nhân viên, MDE 6 điểm kèm power khoảng 0,64 nếu hiệu quả thật 5 điểm, 4 luật dừng, rollback và lịch đợi đủ 7 ngày theo dõi.
+- Điền ba số E1 và số an toàn trong phạm vi cho Thành viên 3; bổ sung phần bàn giao của mình trong `group_report.md` và báo cáo `2A202603873_VuVanChu.md`.
+- Thực hiện với hỗ trợ Codex; phép tính đối chiếu đã được kiểm bằng chương trình, chưa ghi nhận buổi tự kiểm tay hoặc phê duyệt kế hoạch ngoài thực tế.
 
 ### Bằng chứng
 
--
+- Chạy trên môi trường Python 3.12 tại workspace của Thành viên 2: `src/lab13.py` kết thúc thành công; A1 in ĐẠT, tự kiểm B1/B2 đều ĐẠT.
+- A2: (245.585,132 + 84.000 + 1.780.000 + 2.264.000) / 978 = 4.471,968 đ → **4.472 đ [simulated]**; bảng đối chiếu chi tiết ở cuối `report/team/bang_chi_phi.md`.
+- B3: **6.901.220 đ [simulated]** khi giới hạn 2 lần là nhỏ nhất cho cả hệ thống; B4 làm tròn **11.743 đ / 12.415 đ [simulated]**.
+- D1: **1.251; DE 2,48; 3.103; 42 người/nhóm; trần 1.000/300; m tối thiểu 299**, DE 6,96; E1: **994/1.200, 48/177, 51/1.200**, an toàn trong phạm vi **39/982**.
+- YAML được kiểm bằng `yaml.safe_load`, không còn dấu hỏi, đủ 4 luật dừng theo mẫu; chưa tạo commit/push cho phần việc này.
 
 ## Thành viên 3 — Người gắn nhãn 1 · Chỉ số, Event & Bảng lỗi
 
