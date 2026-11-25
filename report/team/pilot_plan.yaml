@@ -96,10 +96,13 @@ pilot:
     Nếu chưa giảm được xem lại xuống <= 50% hoặc chưa đạt điều kiện thì giữ bước, không chuyển 0.50.
     Khóa chính sách xem lại và giới hạn 2 lần chạy trong bước đo chính; nếu phải đổi thì dừng phân tích theo kế hoạch này.
   stop_rules:
-    - "NẾU tỉ lệ mở lại 7 ngày của nhóm can thiệp cao hơn đối chứng >= 2 điểm phần trăm hoặc vượt 6% TRONG 3 lần kiểm tra hằng ngày liên tiếp trên cohort đã đủ 7 ngày THÌ Giám đốc vận hành tắt trợ lý trong 30 phút, chuyển về nhân viên KHÔNG THÌ không được tăng rollout khi chưa xử lý và xác nhận lại an toàn"
+    # Luật 1 chưa chấm ở bước 0.10 vì chưa có cohort đủ 7 ngày; bước này áp dụng luật 2 để dừng vì an toàn.
+    - "NẾU tỉ lệ mở lại 7 ngày của nhóm can thiệp cao hơn đối chứng >= 2 điểm phần trăm hoặc vượt 6% TRONG 3 lần kiểm tra hằng ngày liên tiếp, chỉ đánh giá từ bước rollout 0.25 trên cohort đã theo dõi đủ 7 ngày của từng nhóm THÌ Giám đốc vận hành tắt trợ lý trong 30 phút, chuyển về nhân viên KHÔNG THÌ không được tăng rollout khi chưa xử lý và xác nhận lại an toàn"
     - "NẾU phát hiện >= 1 ca hoàn trùng hoặc báo đã hoàn mà sổ cái chưa ghi thành công TRONG bất kỳ lần đối soát hằng giờ nào THÌ Giám đốc vận hành tắt trợ lý trong 30 phút, Kế toán trưởng xử lý ca sai và Kỹ sư trưởng agent sửa nguyên nhân KHÔNG THÌ không được bật lại hay mở rộng khi chưa có bằng chứng khắc phục"
-    - "NẾU chi phí biến đổi mỗi việc thành công (token + tool + phút xem lại/làm lại đo thật) > 8.000 đ TRONG 2 tuần liên tiếp tại mốc đánh giá tuần THÌ PM trợ lý hoàn phí dừng hang_nang trong 1 ngày, thu hẹp về noi_dia và trình lại chi phí cả hệ thống gồm nhân viên làm thay và cố định 40 triệu/tháng KHÔNG THÌ không được tiếp tục bước đo chính hoặc mở hang_nang trở lại"
-    - "NẾU tỉ lệ sửa + bỏ trên số được xem lại > 40% TRONG 1 tuần tại mốc đánh giá tuần THÌ Trưởng nhóm CSKH giữ rollout, phỏng vấn 5 nhân viên và rà 20 trace trong 3 ngày KHÔNG THÌ không được chuyển bước khi chưa xác nhận nguyên nhân và biện pháp giảm bỏ qua"
+    # Luật 3 chỉ lấy hai tuần ở bước 0.50; không tính giai đoạn xem lại 100% của các bước 0.10/0.25 vào cửa sổ này.
+    - "NẾU chi phí biến đổi mỗi việc thành công (tiền token + tool + tiền công xem lại/làm lại tính bằng phút đo thật nhân đơn giá lương) > 8.000 đ TRONG 2 tuần liên tiếp của bước rollout 0.50 tại mốc đánh giá tuần, không tính các tuần của bước 0.10 và 0.25 THÌ PM trợ lý hoàn phí dừng hang_nang trong 1 ngày, thu hẹp về noi_dia và trình lại chi phí cả hệ thống gồm nhân viên làm thay và cố định 40 triệu/tháng KHÔNG THÌ không được tiếp tục bước đo chính hoặc mở hang_nang trở lại"
+    # Luật 4: tử số và mẫu số cùng tuần; dưới 100 quyết định là chưa đủ dữ liệu, giữ rollout và thu tiếp trước khi xét chuyển bước.
+    - "NẾU tỉ lệ sửa + bỏ trên số được xem lại > 40% với ít nhất 100 quyết định xem lại hợp lệ của nhóm can thiệp TRONG cùng 1 tuần tại mốc đánh giá tuần THÌ Trưởng nhóm CSKH giữ rollout, phỏng vấn 5 nhân viên và rà 20 trace trong 3 ngày KHÔNG THÌ không được chuyển bước khi chưa xác nhận nguyên nhân và biện pháp giảm bỏ qua"
   interim_looks: >-
     Chỉ kiểm tra chỉ số an toàn hằng ngày và đối soát sổ cái hằng giờ; chi phí, sử dụng kiểm tại mốc tuần đã định.
     Không kiểm định sớm hay dừng vì chỉ số chính có vẻ tốt; chỉ phân tích tác động một lần vào 2027-01-04.
