@@ -24,7 +24,7 @@ PHAM_VI = ['noi_dia', 'hang_nang']   # phạm vi pilot
 def so_lan_chay_ky_vong(p, k=None):
     """Số lần chạy trung bình cho 1 yêu cầu khi mỗi lần đúng với xác suất p.
     k = số lần chạy tối đa; k=None nghĩa là chạy lại đến khi đúng."""
-    return 1 / p if k is None else (1 - (1 - p) ** k) / p
+    return 1/p if k is None else (1-(1-p)**k)/p
 
 
 def ti_le_thanh_cong(p, k=None):
@@ -34,7 +34,7 @@ def ti_le_thanh_cong(p, k=None):
 
 def he_so_chi_phi_moi_viec_thanh_cong(p, k=None):
     """Chi phí mỗi việc thành công, tính bằng bội số của giá một lần chạy."""
-    return so_lan_chay_ky_vong(p, k) / ti_le_thanh_cong(p, k)
+    return so_lan_chay_ky_vong(p, k)/ti_le_thanh_cong(p, k)
 
 
 def kiem_tra_dap_an_biet_truoc():
