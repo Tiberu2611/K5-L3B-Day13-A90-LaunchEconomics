@@ -104,11 +104,15 @@ Sao chép mục dưới đây cho từng thành viên.
 
 ### Đóng góp cụ thể
 
--
+- Hoàn thiện `report/team/chi_so.md`: 12 event có `trace_id`, hai chỉ số tự đề xuất, bảng kiểm tra chéo chỉ số với event; soạn với trợ lý AI (Claude Code), đối chiếu số với output `lab13.py`.
+- Rà soát 4 luật dừng trong `pilot_plan.yaml`: đo được từ event; phát hiện luật chi phí > 8.000 đ có thể tự kích hoạt khi xem lại 100% (B4 11.743 đ [simulated]); đề xuất sửa cho Thành viên 2 (chưa sửa file YAML).
+- Soạn bảng khắc phục 5 ca (9, 7, 18, 4, 17) và khung `bang_loi.md`. Không dùng AI để gắn nhãn 20 ca (theo `RULES.md`).
 
 ### Bằng chứng
 
--
+- File: `report/team/chi_so.md`, `report/team/bang_loi.md`, `report/team/2A202603809_ChuQuangLinh.md`.
+- Số trong phần rà soát khớp output `lab13.py`: B4 11.743 đ = 0,98×, A3 hang_nang 8.221 đ, E1 82,83% · 27,12% · 4,25%.
+- Còn thiếu: hai bộ nhãn độc lập 20 ca và tỉ lệ đồng thuận (chờ gắn cùng Thành viên 4).
 
 ## Thành viên 4 — Người gắn nhãn 2 · Giữ hồ sơ Launch v0 & Quản lý nộp bài
 
