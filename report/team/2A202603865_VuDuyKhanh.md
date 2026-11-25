@@ -24,12 +24,12 @@
 - **Báo cáo nhóm (`report/team/group_report.md`) & `TEAM.md`:**
   - Soạn hoàn chỉnh `group_report.md` (8 mục, tóm tắt phương pháp, kết quả A–E, khó khăn kỹ thuật khi cài đặt trên máy thứ hai, hạn chế và hướng cải thiện).
   - Cập nhật thông tin đóng góp, bằng chứng của Thành viên 4 trong `TEAM.md` và chuẩn bị khung tổng hợp cho cả nhóm.
+- **CP3 (`report/team/bang_loi.md`):** hoàn thành gắn nhãn độc lập 20 ca lỗi cùng Thành viên 3, đạt tỉ lệ đồng thuận **16/20 = 80%**, thống nhất nhãn và 4 câu quy tắc phân biệt cho các ca lệch. Cập nhật chuyển trạng thái Mục 5 trong `ho_so_launch_v0.md` sang **Xong, có bằng chứng**.
 - **Phiếu chấm hội đồng (`report/team/phieu_cham.md`):**
   - Thiết lập sẵn thông tin nhóm chấm (A90 · L3B) và soạn 3 câu hỏi phản biện dự phòng bám sát số liệu đối chiếu (chi phí xem lại 100%, ngưỡng 20 cụm và power 0,64, tỉ lệ mở lại 4,25% với luật dừng tuần đầu).
 - **Kiểm chứng trên máy thứ hai:**
   - Tự thiết lập môi trường `src/.venv`, cài đặt `src/requirements.txt` và chạy lại `python lab13.py` để xác nhận toàn bộ kết quả khớp trên máy khác.
-- **Phần đang chờ phối hợp / phiên 17:00:**
-  - Gắn nhãn độc lập 20 ca lỗi (cột `Nhãn người 2` trong `bang_loi.md`) cùng Thành viên 3; sau đó cập nhật tỉ lệ đồng thuận vào `ho_so_launch_v0.md` và `group_report.md`.
+- **Phần đang chờ phiên duyệt chéo 17:00:**
   - Điền kết quả chấm chéo thực tế vào `phieu_cham.md` và `group_report.md` trong phiên bảo vệ tại lớp.
 
 ## 4. Bằng chứng
@@ -52,6 +52,6 @@
 
 ## 6. Tự đánh giá
 
-- **Phần làm tốt:** Chủ động dựng và cập nhật cuốn chiếu `ho_so_launch_v0.md` đủ 7 mục rõ ràng, trung thực với dữ liệu (nêu thẳng các con số bất lợi như `power 0,64` và ngưỡng hoà vốn xem lại `≤ 5,12 phút/ca`), đồng thời đối khớp chặt chẽ mốc thời gian với kế hoạch pilot và kiểm chứng chạy code trên máy thứ hai.
-- **Phần còn thiếu / cần cải thiện:** Cần hoàn tất ngay phần gắn nhãn độc lập 20 ca lỗi cùng Thành viên 3 để chuyển trạng thái Mục 5 trong `ho_so_launch_v0.md` từ `Chưa` sang `Xong, có bằng chứng`, và cập nhật kết quả duyệt chéo sau phiên 17:00.
+- **Phần làm tốt:** Chủ động dựng và cập nhật cuốn chiếu `ho_so_launch_v0.md` đủ 7 mục rõ ràng, trung thực với dữ liệu (nêu thẳng các con số bất lợi như `power 0,64` và ngưỡng hoà vốn xem lại `≤ 5,12 phút/ca`), hoàn thành gắn nhãn CP3 đạt đồng thuận 80%, đồng thời đối khớp chặt chẽ mốc thời gian với kế hoạch pilot và kiểm chứng chạy code trên máy thứ hai.
+- **Phần còn thiếu / cần hoàn thiện:** Cập nhật kết quả duyệt chéo và hoàn thiện `phieu_cham.md` sau phiên hội đồng 17:00 tại lớp.
 - **Điều học được:** Một hồ sơ duyệt Gate 2a thuyết phục không phải là hồ sơ chọn phương án lạc quan nhất, mà là hồ sơ tách rõ dữ liệu đo thật với dữ liệu giả lập (`simulated`), chỉ ra được giới hạn cỡ mẫu khi chia cụm, và gắn mỗi rủi ro kinh tế với một điều kiện dừng có người chịu trách nhiệm cụ thể.
