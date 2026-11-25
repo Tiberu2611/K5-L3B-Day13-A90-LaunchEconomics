@@ -63,12 +63,13 @@ Sao chép mục dưới đây cho từng thành viên.
 
 - Phụ trách `src/lab13.py` cho A1–A4 và B1–B4, viết với trợ lý AI (Claude Code); file cũng in sẵn D1 và ba chỉ số E1 để Thành viên 2 kiểm tra và tiếp nhận.
 - Phụ trách mục E2 (ba dòng rủi ro kinh tế) trong `report/team/chi_so.md`, soạn với trợ lý AI.
+- Tính tay kiểm chứng ba phép thử A1 và năm câu cỡ mẫu D1.
 
 ### Bằng chứng
 
 - Commit `5e09dc7` (nhánh `manh`), gộp vào `main` qua PR #1 (`548aa34`).
 - `python lab13.py` in `Ba phép thử đáp án biết trước: ĐẠT`; A2 = 4.472 đ [simulated], A4 = 4.599 đ [simulated], B3 giới hạn 2 lần = 6.901.220 đ [simulated].
-- Báo cáo cá nhân: `report/team/2A202603857_NguyenLeTrongManh.md`.
+- Phép tính tay A1, D1: mục 5 của báo cáo cá nhân `report/team/2A202603857_NguyenLeTrongManh.md`.
 
 ## Thành viên 2 — Người kiểm số (Ca 1) → Người viết code (Ca 2)
 
