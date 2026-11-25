@@ -112,7 +112,7 @@ Sao chép mục dưới đây cho từng thành viên.
 
 - File: `report/team/chi_so.md`, `report/team/bang_loi.md`, `report/team/2A202603809_ChuQuangLinh.md`.
 - Số trong phần rà soát khớp output `lab13.py`: B4 11.743 đ = 0,98×, A3 hang_nang 8.221 đ, E1 82,83% · 27,12% · 4,25%.
-- Còn thiếu: hai bộ nhãn độc lập 20 ca và tỉ lệ đồng thuận (chờ gắn cùng Thành viên 4).
+- Bộ nhãn người 1 (20 ca) đã gắn trong `bang_loi.md`. Còn thiếu: bộ nhãn người 2 của Thành viên 4, tỉ lệ đồng thuận và nhãn thống nhất.
 
 ## Thành viên 4 — Người gắn nhãn 2 · Giữ hồ sơ Launch v0 & Quản lý nộp bài
 

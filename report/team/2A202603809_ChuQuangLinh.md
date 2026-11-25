@@ -24,7 +24,8 @@
 
 - Files: `report/team/chi_so.md`, `report/team/bang_loi.md`, `report/team/2A202603809_ChuQuangLinh.md`.
 - Số liệu trong phần rà soát lấy từ output của `python lab13.py` (B4 11.743 đ = 0,98×; A3 hang_nang 8.221 đ; E1 4,25% và 3,97%; sửa + bỏ 27,12%), đều là dữ liệu giả lập của lab.
-- Đồng thuận gắn nhãn: **chưa có** (chờ gắn nhãn độc lập cùng Thành viên 4).
+- Bộ nhãn người 1 (20 ca) do Thành viên 3 tự gắn, đã điền trong `report/team/bang_loi.md` (cột "Nhãn người 1") trước khi so với Thành viên 4.
+- Đồng thuận gắn nhãn: **chưa có**; chờ Thành viên 4 gắn cột "Nhãn người 2" rồi hai người mới so nhãn.
 
 ## 5. Công cụ AI đã dùng
 
@@ -35,5 +36,5 @@
 ## 6. Tự đánh giá
 
 - **Phần làm tốt:** danh sách event đủ và nối được với cả 5 chỉ số; rà soát luật dừng chỉ ra điểm mâu thuẫn mà hội đồng dễ hỏi.
-- **Phần còn thiếu:** hai bộ nhãn 20 ca, tỉ lệ đồng thuận và quy tắc phân biệt trong `bang_loi.md`; chưa có commit của các file trên tại thời điểm viết; chưa trao đổi với Thành viên 2 về đề xuất sửa luật dừng chi phí.
+- **Phần còn thiếu:** cột nhãn người 2 (Thành viên 4), tỉ lệ đồng thuận, nhãn thống nhất và quy tắc phân biệt cho các ca lệch trong `bang_loi.md`; sau khi có nhãn thống nhất phải chọn lại 5 ca của bảng khắc phục cho đủ 5 loại (ca 17 và 18 hiện ghi khác nhãn người 1); chưa trao đổi với Thành viên 2 về đề xuất sửa luật dừng chi phí.
 - **Điều rút ra:** chỉ số nào không có event tương ứng thì chưa đo được; và một luật dừng viết đúng mẫu vẫn có thể tự kích hoạt vì ngưỡng chưa tính tới giai đoạn xem lại 100%.

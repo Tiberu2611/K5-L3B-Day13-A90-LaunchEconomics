@@ -10,26 +10,26 @@ Theo `RULES.md`, hai bộ nhãn phải do hai người tự gắn độc lập, 
 
 | Ca | Tóm tắt ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- | --- |
-| 1 | Khách nhập thiếu hai chữ số tài khoản, ngân hàng trả lỗi | [điền] | [điền] | [điền] | [điền] |
-| 2 | Kiện 28 kg, tool tra giá sai tham số, hoàn thiếu 45.000 đ | [điền] | [điền] | [điền] | [điền] |
-| 3 | Hoàn về ví LogiX trong 5 phút, khách chờ về ngân hàng | [điền] | [điền] | [điền] | [điền] |
-| 4 | Chặng hãng nước ngoài, không có dữ liệu, chuyển nhân viên | [điền] | [điền] | [điền] | [điền] |
-| 5 | 14 đơn có mã giảm giá bị hoàn theo giá trước giảm, chỉ thấy khi kiểm mẫu | [điền] | [điền] | [điền] | [điền] |
-| 6 | Khách chọn mục "giao trễ" nhưng mô tả hàng vỡ, bị từ chối | [điền] | [điền] | [điền] | [điền] |
-| 7 | Sổ cái 503 sau 3 lần thử, vẫn báo "đã hoàn" | [điền] | [điền] | [điền] | [điền] |
-| 8 | Dẫn "Điều 7.2" không tồn tại, số tiền vẫn đúng | [điền] | [điền] | [điền] | [điền] |
-| 9 | Khách nhập mã đơn sàn TMĐT thay mã vận đơn, trợ lý chỉ báo không hợp lệ | [điền] | [điền] | [điền] | [điền] |
-| 10 | Đơn trễ do bão, từ chối đúng chính sách, ứng dụng vẫn hiện "cam kết 24 giờ" | [điền] | [điền] | [điền] | [điền] |
-| 11 | Tin nhắn thoại 40 giây, trợ lý không xử lý được âm thanh | [điền] | [điền] | [điền] | [điền] |
-| 12 | Tool depot D05 thiếu trường, token gấp 3 lần suốt 3 tuần, không ai thấy | [điền] | [điền] | [điền] | [điền] |
-| 13 | Hỏi hoàn phí bảo hiểm của đối tác, trợ lý trả lời chung chung về phí vận chuyển | [điền] | [điền] | [điền] | [điền] |
-| 14 | Khách bấm nhầm "Xác nhận đã nhận tiền", yêu cầu bị đóng | [điền] | [điền] | [điền] | [điền] |
-| 15 | Trễ 26 giờ phải hoàn 50% nhưng tính 100%, nhân viên bắt được | [điền] | [điền] | [điền] | [điền] |
-| 16 | Gửi thông báo Zalo lúc 2:14 sáng theo đúng thiết kế | [điền] | [điền] | [điền] | [điền] |
-| 17 | Bộ nhớ đệm bảng giá cũ, 212 đơn lệch 1.000–2.000 đ trong 9 ngày | [điền] | [điền] | [điền] | [điền] |
-| 18 | Tính đúng 15.000 đ nhưng tin nhắn không ghi cách tính, khách mở lại | [điền] | [điền] | [điền] | [điền] |
-| 19 | Đơn 14 tháng trước, trợ lý chỉ truy cập 12 tháng, nói rõ và chuyển nhân viên | [điền] | [điền] | [điền] | [điền] |
-| 20 | Khách gửi lại sau 10 phút, hoàn hai lần vì thiếu khoá chống trùng | [điền] | [điền] | [điền] | [điền] |
+| 1 | Khách nhập thiếu hai chữ số tài khoản, ngân hàng trả lỗi | Do người dùng | [điền] | [điền] | [điền] |
+| 2 | Kiện 28 kg, tool tra giá sai tham số, hoàn thiếu 45.000 đ | Hệ thống | [điền] | [điền] | [điền] |
+| 3 | Hoàn về ví LogiX trong 5 phút, khách chờ về ngân hàng | Do người dùng | [điền] | [điền] | [điền] |
+| 4 | Chặng hãng nước ngoài, không có dữ liệu, chuyển nhân viên | Giới hạn hệ thống | [điền] | [điền] | [điền] |
+| 5 | 14 đơn có mã giảm giá bị hoàn theo giá trước giảm, chỉ thấy khi kiểm mẫu | Ngầm | [điền] | [điền] | [điền] |
+| 6 | Khách chọn mục "giao trễ" nhưng mô tả hàng vỡ, bị từ chối | Do người dùng | [điền] | [điền] | [điền] |
+| 7 | Sổ cái 503 sau 3 lần thử, vẫn báo "đã hoàn" | Hệ thống | [điền] | [điền] | [điền] |
+| 8 | Dẫn "Điều 7.2" không tồn tại, số tiền vẫn đúng | Ngữ cảnh | [điền] | [điền] | [điền] |
+| 9 | Khách nhập mã đơn sàn TMĐT thay mã vận đơn, trợ lý chỉ báo không hợp lệ | Do người dùng | [điền] | [điền] | [điền] |
+| 10 | Đơn trễ do bão, từ chối đúng chính sách, ứng dụng vẫn hiện "cam kết 24 giờ" | Hệ thống | [điền] | [điền] | [điền] |
+| 11 | Tin nhắn thoại 40 giây, trợ lý không xử lý được âm thanh | Giới hạn hệ thống | [điền] | [điền] | [điền] |
+| 12 | Tool depot D05 thiếu trường, token gấp 3 lần suốt 3 tuần, không ai thấy | Ngầm | [điền] | [điền] | [điền] |
+| 13 | Hỏi hoàn phí bảo hiểm của đối tác, trợ lý trả lời chung chung về phí vận chuyển | Giới hạn hệ thống | [điền] | [điền] | [điền] |
+| 14 | Khách bấm nhầm "Xác nhận đã nhận tiền", yêu cầu bị đóng | Do người dùng | [điền] | [điền] | [điền] |
+| 15 | Trễ 26 giờ phải hoàn 50% nhưng tính 100%, nhân viên bắt được | Hệ thống | [điền] | [điền] | [điền] |
+| 16 | Gửi thông báo Zalo lúc 2:14 sáng theo đúng thiết kế | Ngữ cảnh | [điền] | [điền] | [điền] |
+| 17 | Bộ nhớ đệm bảng giá cũ, 212 đơn lệch 1.000–2.000 đ trong 9 ngày | Hệ thống | [điền] | [điền] | [điền] |
+| 18 | Tính đúng 15.000 đ nhưng tin nhắn không ghi cách tính, khách mở lại | Hệ thống | [điền] | [điền] | [điền] |
+| 19 | Đơn 14 tháng trước, trợ lý chỉ truy cập 12 tháng, nói rõ và chuyển nhân viên | Do người dùng | [điền] | [điền] | [điền] |
+| 20 | Khách gửi lại sau 10 phút, hoàn hai lần vì thiếu khoá chống trùng | Hệ thống | [điền] | [điền] | [điền] |
 
 **Tỉ lệ đồng thuận:** [điền] / 20 = [điền]% (số ca trùng ÷ 20; cần ≥ 16/20 = 80%)
 
