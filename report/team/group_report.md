@@ -28,7 +28,7 @@ Dựng hồ sơ launch v0 cho trợ lý hoàn phí LogiX-VN để hội đồng 
 - Ba yếu tố nhạy nhất: làm lại ×2 (+51,8%), xem lại ×2 (+40,7%), lương +25% (+23,1%) **[simulated]**. Xem lại 100% đẩy lên 11.743 đ = 0,98× **[simulated]**.
 - Chỉ số trong đợt chạy thử: chính 82,83%, bỏ qua gợi ý 27,12%, mở lại 7 ngày 4,25%.
 - Pilot: chia theo nhân viên 20 + 20, mde 6 điểm (859/nhóm, DE 6,96); power 0,64 nếu tác động thật 5 điểm.
-- Đồng thuận gắn nhãn CP3: ... / 20.
+- Đồng thuận gắn nhãn CP3: 16 / 20 (80%).
 - **Đề xuất cuối: Go có điều kiện** (4 điều kiện, xem `ho_so_launch_v0.md`).
 - Kết quả duyệt chéo nhóm nhận được từ hội đồng: ... / 30, quyết định ...
 

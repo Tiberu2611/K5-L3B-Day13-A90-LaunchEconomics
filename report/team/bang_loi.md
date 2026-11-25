@@ -10,34 +10,37 @@ Theo `RULES.md`, hai bộ nhãn phải do hai người tự gắn độc lập, 
 
 | Ca | Tóm tắt ca | Nhãn người 1 | Nhãn người 2 | Trùng? | Nhãn thống nhất |
 | --: | --- | --- | --- | --- | --- |
-| 1 | Khách nhập thiếu hai chữ số tài khoản, ngân hàng trả lỗi | Do người dùng | [điền] | [điền] | [điền] |
-| 2 | Kiện 28 kg, tool tra giá sai tham số, hoàn thiếu 45.000 đ | Hệ thống | [điền] | [điền] | [điền] |
-| 3 | Hoàn về ví LogiX trong 5 phút, khách chờ về ngân hàng | Do người dùng | [điền] | [điền] | [điền] |
-| 4 | Chặng hãng nước ngoài, không có dữ liệu, chuyển nhân viên | Giới hạn hệ thống | [điền] | [điền] | [điền] |
-| 5 | 14 đơn có mã giảm giá bị hoàn theo giá trước giảm, chỉ thấy khi kiểm mẫu | Ngầm | [điền] | [điền] | [điền] |
-| 6 | Khách chọn mục "giao trễ" nhưng mô tả hàng vỡ, bị từ chối | Do người dùng | [điền] | [điền] | [điền] |
-| 7 | Sổ cái 503 sau 3 lần thử, vẫn báo "đã hoàn" | Hệ thống | [điền] | [điền] | [điền] |
-| 8 | Dẫn "Điều 7.2" không tồn tại, số tiền vẫn đúng | Ngữ cảnh | [điền] | [điền] | [điền] |
-| 9 | Khách nhập mã đơn sàn TMĐT thay mã vận đơn, trợ lý chỉ báo không hợp lệ | Do người dùng | [điền] | [điền] | [điền] |
-| 10 | Đơn trễ do bão, từ chối đúng chính sách, ứng dụng vẫn hiện "cam kết 24 giờ" | Hệ thống | [điền] | [điền] | [điền] |
-| 11 | Tin nhắn thoại 40 giây, trợ lý không xử lý được âm thanh | Giới hạn hệ thống | [điền] | [điền] | [điền] |
-| 12 | Tool depot D05 thiếu trường, token gấp 3 lần suốt 3 tuần, không ai thấy | Ngầm | [điền] | [điền] | [điền] |
-| 13 | Hỏi hoàn phí bảo hiểm của đối tác, trợ lý trả lời chung chung về phí vận chuyển | Giới hạn hệ thống | [điền] | [điền] | [điền] |
-| 14 | Khách bấm nhầm "Xác nhận đã nhận tiền", yêu cầu bị đóng | Do người dùng | [điền] | [điền] | [điền] |
-| 15 | Trễ 26 giờ phải hoàn 50% nhưng tính 100%, nhân viên bắt được | Hệ thống | [điền] | [điền] | [điền] |
-| 16 | Gửi thông báo Zalo lúc 2:14 sáng theo đúng thiết kế | Ngữ cảnh | [điền] | [điền] | [điền] |
-| 17 | Bộ nhớ đệm bảng giá cũ, 212 đơn lệch 1.000–2.000 đ trong 9 ngày | Hệ thống | [điền] | [điền] | [điền] |
-| 18 | Tính đúng 15.000 đ nhưng tin nhắn không ghi cách tính, khách mở lại | Hệ thống | [điền] | [điền] | [điền] |
-| 19 | Đơn 14 tháng trước, trợ lý chỉ truy cập 12 tháng, nói rõ và chuyển nhân viên | Do người dùng | [điền] | [điền] | [điền] |
-| 20 | Khách gửi lại sau 10 phút, hoàn hai lần vì thiếu khoá chống trùng | Hệ thống | [điền] | [điền] | [điền] |
+| 1 | Khách nhập thiếu hai chữ số tài khoản, ngân hàng trả lỗi | Do người dùng | Do người dùng | Có | Do người dùng |
+| 2 | Kiện 28 kg, tool tra giá sai tham số, hoàn thiếu 45.000 đ | Hệ thống | Hệ thống | Có | Hệ thống |
+| 3 | Hoàn về ví LogiX trong 5 phút, khách chờ về ngân hàng | Do người dùng | Ngữ cảnh | Không | Ngữ cảnh |
+| 4 | Chặng hãng nước ngoài, không có dữ liệu, chuyển nhân viên | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 5 | 14 đơn có mã giảm giá bị hoàn theo giá trước giảm, chỉ thấy khi kiểm mẫu | Ngầm | Ngầm | Có | Ngầm |
+| 6 | Khách chọn mục "giao trễ" nhưng mô tả hàng vỡ, bị từ chối | Do người dùng | Do người dùng | Có | Do người dùng |
+| 7 | Sổ cái 503 sau 3 lần thử, vẫn báo "đã hoàn" | Hệ thống | Hệ thống | Có | Hệ thống |
+| 8 | Dẫn "Điều 7.2" không tồn tại, số tiền vẫn đúng | Ngữ cảnh | Hệ thống | Không | Hệ thống |
+| 9 | Khách nhập mã đơn sàn TMĐT thay mã vận đơn, trợ lý chỉ báo không hợp lệ | Do người dùng | Do người dùng | Có | Do người dùng |
+| 10 | Đơn trễ do bão, từ chối đúng chính sách, ứng dụng vẫn hiện "cam kết 24 giờ" | Hệ thống | Hệ thống | Có | Hệ thống |
+| 11 | Tin nhắn thoại 40 giây, trợ lý không xử lý được âm thanh | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 12 | Tool depot D05 thiếu trường, token gấp 3 lần suốt 3 tuần, không ai thấy | Ngầm | Ngầm | Có | Ngầm |
+| 13 | Hỏi hoàn phí bảo hiểm của đối tác, trợ lý trả lời chung chung về phí vận chuyển | Giới hạn hệ thống | Giới hạn hệ thống | Có | Giới hạn hệ thống |
+| 14 | Khách bấm nhầm "Xác nhận đã nhận tiền", yêu cầu bị đóng | Do người dùng | Do người dùng | Có | Do người dùng |
+| 15 | Trễ 26 giờ phải hoàn 50% nhưng tính 100%, nhân viên bắt được | Hệ thống | Hệ thống | Có | Hệ thống |
+| 16 | Gửi thông báo Zalo lúc 2:14 sáng theo đúng thiết kế | Ngữ cảnh | Ngữ cảnh | Có | Ngữ cảnh |
+| 17 | Bộ nhớ đệm bảng giá cũ, 212 đơn lệch 1.000–2.000 đ trong 9 ngày | Hệ thống | Hệ thống | Có | Hệ thống |
+| 18 | Tính đúng 15.000 đ nhưng tin nhắn không ghi cách tính, khách mở lại | Hệ thống | Ngữ cảnh | Không | Ngữ cảnh |
+| 19 | Đơn 14 tháng trước, trợ lý chỉ truy cập 12 tháng, nói rõ và chuyển nhân viên | Do người dùng | Giới hạn hệ thống | Không | Giới hạn hệ thống |
+| 20 | Khách gửi lại sau 10 phút, hoàn hai lần vì thiếu khoá chống trùng | Hệ thống | Hệ thống | Có | Hệ thống |
 
-**Tỉ lệ đồng thuận:** [điền] / 20 = [điền]% (số ca trùng ÷ 20; cần ≥ 16/20 = 80%)
+**Tỉ lệ đồng thuận:** 16 / 20 = 80% (số ca trùng ÷ 20; đạt ngưỡng yêu cầu ≥ 16/20 = 80%)
 
 ## Quy tắc phân biệt cho các ca không trùng
 
-Mỗi ca không trùng một câu. Đồng thuận dưới 80% thì ghi định nghĩa đã viết lại. Điền sau khi hai người đã so nhãn, theo đúng các ca lệch thực tế.
+Mỗi ca không trùng một câu quy tắc phân biệt theo nguyên nhân gốc (không theo chỗ cần sửa):
 
-- Ca [điền]: [điền một câu quy tắc, ví dụ theo cặp câu hỏi nhận diện của từng loại: đầu vào của khách sai? có vi phạm thiết kế và có người thấy? chỉ giả định không khớp? làm được không dù có cố gắng? chỉ phát hiện qua kiểm mẫu?]
+- **Ca 3 (Ngữ cảnh):** Khách không nhập sai thông tin đầu vào; quy trình hoàn tiền vào ví đúng thiết kế kỹ thuật nhưng giả định ngầm là khách hài lòng với tiền ví thay vì hoàn về tài khoản ngân hàng là không khớp mong đợi thực tế.
+- **Ca 8 (Hệ thống):** Dẫn chiếu điều khoản pháp lý/chính sách không tồn tại là vi phạm độ chính xác thiết kế và tính toàn vẹn thông tin; lỗi lộ rõ ra ngoài và nhân viên/khách đều thấy, không phải lỗi ngữ cảnh.
+- **Ca 18 (Ngữ cảnh):** Số tiền hoàn 15.000 đ hoàn toàn đúng quy định chính sách (hệ thống tính không sai); việc khách mở lại khiếu nại xuất phát từ giả định khách tự hiểu công thức tính, giải quyết bằng cách làm rõ thông điệp hiển thị.
+- **Ca 19 (Giới hạn hệ thống):** Việc khách khiếu nại đơn hàng cũ không phải lỗi do người dùng nhập sai, mà do hệ thống bị giới hạn thiết kế lưu trữ dữ liệu (chỉ truy cập 12 tháng), trợ lý không thể xử lý dù cố gắng.
 
 Câu hỏi nhận diện dùng khi tranh luận (lấy từ hướng dẫn của lab, nguyên tắc "theo nguyên nhân gốc, không theo chỗ cần sửa"):
 
