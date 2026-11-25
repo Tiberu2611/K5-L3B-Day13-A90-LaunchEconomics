@@ -20,7 +20,7 @@
 - **E2:** ba dòng rủi ro kinh tế trong `chi_so.md`, số lấy từ A4, B1, B4.
 - File cũng in sẵn D1 và E1 để Thành viên 2 kiểm tra và tiếp nhận.
 - **D1 (tính tay kiểm chứng):** hoàn thành tính tay 5 câu cỡ mẫu a–e khớp với `src/lab13.py` (1.251/nhóm; 3.103/nhóm → 84 người > 40; trần 1.000; trần 300; m ≥ 299 với DE = 6,96 cho mức chênh 6 điểm).
-- Chưa làm tại thời điểm viết: kiểm tra cuối toàn repo (chờ `bang_loi.md` và phần event của `chi_so.md`).
+- **Kiểm tra cuối (chạy với Claude Code, trước duyệt chéo):** `lab13.py` chạy hết, A1 ĐẠT; `pilot_plan.yaml` đọc được, không còn dấu hỏi, 4 luật dừng đủ bốn vế; `report/team` không có từ bị cấm; hai CSV và file gốc không bị sửa. Các điểm lệch phát hiện được (ví dụ ca 17 trong bảng khắc phục khác nhãn thống nhất) thuộc file của thành viên khác, chưa sửa tại thời điểm viết; `phieu_cham.md` chờ duyệt chéo.
 
 ## 4. Bằng chứng
 
@@ -38,7 +38,7 @@
 ## 5. Công cụ AI đã dùng
 
 - **Công cụ:** Claude Code (Anthropic).
-- **Dùng vào việc:** tóm tắt đề, xử lý lỗi môi trường Python, viết `src/lab13.py`, soạn mục E2, phần đóng góp trong `TEAM.md` và bản nháp báo cáo này. A1, `mo_hinh` và `co_mau` bám sát code mẫu trong `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md`.
+- **Dùng vào việc:** tóm tắt đề, xử lý lỗi môi trường Python, viết `src/lab13.py`, thao tác Git, soạn mục E2, phần đóng góp trong `TEAM.md` và bản nháp báo cáo này. A1, `mo_hinh` và `co_mau` bám sát code mẫu trong `docs/Lab13_Huong_dan_chi_tiet_buoi_chieu.md`.
 - **Kiểm tra tự động:** ba phép thử A1; assert "giảm một nửa" bằng nửa mức tăng "gấp đôi"; assert tác động của cặp B2 bằng tổng hai tác động riêng; Claude đối chiếu kết quả in ra với số trong hướng dẫn.
 - **Tôi tự kiểm tra:**
   - Tự tính tay lại 3 phép thử A1 (`p = 0,8`): `k=2` ra `1,20`; `k=∞` ra `1,25`; `k=3` ra `1,24 / 0,992 = 1,25`.
